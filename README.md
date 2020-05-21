@@ -28,9 +28,9 @@
    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
    ```
 2. Edit ~/.zshrc with your choice text editor. 
-   - On the `plugins=` line, set `zsh-syntax-highlighting `
+   - On the `plugins=` line, add `zsh-syntax-highlighting`
      as the last plugin.
-     - The `z` plugin is basically `cd` but smarter. You should put `z`
+     - The `z` plugin is basically `cd` but smarter. You should add `z`
        at any point before `zsh-syntax-highlighting`
      - More plugins can be found in `~/.oh-my-zsh/custom/plugins`. 
        If you want to use any of these, set them before `zsh-syntax-highlighting`.
