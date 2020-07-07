@@ -49,7 +49,7 @@ sudo -u $real_user echo 'POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true' >> ~/.z
 sudo -u $real_user rm ~/.p10k.zsh
 sudo -u $real_user curl https://raw.githubusercontent.com/Jyumpp/jyumpp-zsh-theme/master/.p10k.zsh --output ~/.p10k.zsh
 
-echo 'if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then\n  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"\nfi' | echo "" | cat - ~/.zshrc > temp && mv temp ~/.zshrc
+echo 'if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then\n  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"\nfi' | echo "" | echo ZSH_DISABLE_COMPFIX=true | cat - ~/.zshrc > temp && mv temp ~/.zshrc
 echo 'source ~/.p10k.zsh' >> ~/.zshrc
 
 echo 'All done! Go ahead and launch zsh'
