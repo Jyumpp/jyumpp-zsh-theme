@@ -43,3 +43,7 @@ else
 	echo "I don't think I can do this for you. Please manually follow the GitHub instructions."
 fi
 
+echo 'POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true' >>! ~/.zshrc
+wget https://raw.githubusercontent.com/Jyumpp/jyumpp-zsh-theme/master/.p10k.zsh -P ~/
+
+echo 'All done! Go ahead and launch zsh'
