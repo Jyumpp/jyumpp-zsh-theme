@@ -34,11 +34,11 @@ sudo -u $real_user git clone --depth=1 https://github.com/romkatv/powerlevel10k.
 sudo -u $real_user git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-	sudo -u $real_user sed -i 's/.*plugins=.*/plugins=(git z zsh-syntax-highlighting)/' ~/.zshrc
-	sudo -u $real_user sed -i 's/.*ZSH_THEME=.*/ZSH_THEME="powerlevel10k/powerlevel10k/' ~/.zshrc	
+	sudo -u $real_user sed -i '/plugins=/c\plugins=(git z zsh-syntax-highlighting)' ~/.zshrc
+	sudo -u $real_user sed -i '/ZSH_THEME=/c\ZSH_THEME="powerlevel10k/powerlevel10k"' ~/.zshrc	
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	sudo -u $real_user sed -i "" 's/.*plugins=.*/plugins=(git z zsh-syntax-highlighting)/' ~/.zshrc
-	sudo -u $real_user sed -i "" 's/.*ZSH_THEME=.*/ZSH_THEME="powerlevel10k/powerlevel10k/' ~/.zshrc	
+	sudo -u $real_user sed -i "" 's/.*ZSH_THEME=.*/ZSH_THEME="powerlevel10k/powerlevel10k"/' ~/.zshrc	
 else
 	echo "I don't think I can do this for you. Please manually follow the GitHub instructions."
 fi
