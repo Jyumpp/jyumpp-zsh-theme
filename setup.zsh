@@ -27,7 +27,7 @@ command -v zsh >/dev/null 2>&1 ||  {
 echo "You have zsh!"
 
 echo "Now let's install OhMyZsh"
-sudo -u $real_user sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo -u $real_user sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --unattended"
 
 echo "I need a couple packages from GitHub now. I'm gonna download them."
 sudo -u $real_user git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -45,5 +45,8 @@ fi
 
 sudo -u $real_user echo 'POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true' >> ~/.zshrc
 sudo -u $real_user wget https://raw.githubusercontent.com/Jyumpp/jyumpp-zsh-theme/master/.p10k.zsh -P ~/
+
+echo 'if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then\n  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"\nfi' | cat - ~/.zshrc > temp && mv temp ~/.zshrc
+echo '[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh' > ~/.zshrc
 
 echo 'All done! Go ahead and launch zsh'
