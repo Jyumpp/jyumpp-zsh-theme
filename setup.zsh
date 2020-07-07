@@ -42,13 +42,14 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	sudo -u $real_user sed -i "" 's/.*ZSH_THEME=.*/ZSH_THEME="powerlevel10k/powerlevel10k"/' ~/.zshrc	
 else
 	echo "I don't think I can do this for you. Please manually follow the GitHub instructions."
+	exit 0
 fi
 
 sudo -u $real_user echo 'POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true' >> ~/.zshrc
 sudo -u $real_user rm ~/.p10k.zsh
 sudo -u $real_user wget https://raw.githubusercontent.com/Jyumpp/jyumpp-zsh-theme/master/.p10k.zsh -P ~/
 
-echo 'if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then\n  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"\nfi' | cat - ~/.zshrc > temp && mv temp ~/.zshrc
-echo '[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh' >> ~/.zshrc
+# echo 'if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then\n  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"\nfi' | cat - ~/.zshrc > temp && mv temp ~/.zshrc
+# echo '[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh' >> ~/.zshrc
 
 echo 'All done! Go ahead and launch zsh'
