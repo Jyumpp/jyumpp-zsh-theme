@@ -33,6 +33,7 @@ echo "I need a couple packages from GitHub now. I'm gonna download them."
 sudo -u $real_user git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 sudo -u $real_user git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
+echo "Now I need to change the .zshrc file."
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	sudo -u $real_user sed -i '/plugins=/c\plugins=(git z zsh-syntax-highlighting)' ~/.zshrc
 	sudo -u $real_user sed -i '/ZSH_THEME=/c\ZSH_THEME="powerlevel10k/powerlevel10k"' ~/.zshrc	
