@@ -47,6 +47,6 @@ sudo -u $real_user echo 'POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true' >> ~/.z
 sudo -u $real_user wget https://raw.githubusercontent.com/Jyumpp/jyumpp-zsh-theme/master/.p10k.zsh -P ~/
 
 echo 'if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then\n  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"\nfi' | cat - ~/.zshrc > temp && mv temp ~/.zshrc
-echo '[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh' > ~/.zshrc
+echo '[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh' >> ~/.zshrc
 
 echo 'All done! Go ahead and launch zsh'
