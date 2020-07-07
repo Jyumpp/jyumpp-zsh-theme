@@ -39,7 +39,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	sudo -u $real_user sed -i '/ZSH_THEME=/c\ZSH_THEME="powerlevel10k/powerlevel10k"' ~/.zshrc	
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	sudo -u $real_user sed -i "" 's/.*plugins=.*/plugins=(git z zsh-syntax-highlighting)/' ~/.zshrc
-	sudo -u $real_user sed -i "" 's/.*ZSH_THEME=.*/ZSH_THEME="powerlevel10k/powerlevel10k"/' ~/.zshrc	
+	sudo -u $real_user sed -i "" 's|.*ZSH_THEME=.*|ZSH_THEME="powerlevel10k/powerlevel10k"|' ~/.zshrc	
 else
 	echo "I don't think I can do this for you. Please manually follow the GitHub instructions."
 	exit 0
