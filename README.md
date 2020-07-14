@@ -1,5 +1,25 @@
 # Setup for Zsh (Hunter's Weirdly Specific Theme)
 
+# Font install:
+Download these four ttf files:
+
+- [MesloLGS NF Regular.ttf](
+    https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf)
+- [MesloLGS NF Bold.ttf](
+    https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf)
+- [MesloLGS NF Italic.ttf](
+    https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf)
+- [MesloLGS NF Bold Italic.ttf](
+    https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)
+
+# Automatic Theme Install
+Run the following: 
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Jyumpp/jyumpp-zsh-theme/master/setup.zsh)"
+```
+This is experimental and may not work. If it doesn't, try below.
+
+# Manual Theme Install
 ## Zsh Install
 1. Try the following:
     ```bash
