@@ -12,6 +12,8 @@ Download these four ttf files:
 - [MesloLGS NF Bold Italic.ttf](
     https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)
 
+Once installed, select MesloLGS as the font for your terminal.
+
 ## Automatic Theme Install
 Run the following: 
 ```bash
