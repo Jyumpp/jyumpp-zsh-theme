@@ -1,6 +1,6 @@
 # Setup for Zsh (Hunter's Weirdly Specific Theme)
 
-# Font install:
+## Font install:
 Download these four ttf files:
 
 - [MesloLGS NF Regular.ttf](
@@ -12,15 +12,15 @@ Download these four ttf files:
 - [MesloLGS NF Bold Italic.ttf](
     https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)
 
-# Automatic Theme Install
+## Automatic Theme Install
 Run the following: 
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Jyumpp/jyumpp-zsh-theme/master/setup.zsh)"
 ```
 This is experimental and may not work. If it doesn't, try below.
 
-# Manual Theme Install
-## Zsh Install
+## Manual Theme Install
+### Zsh Install
 1. Try the following:
     ```bash
     zsh
@@ -34,14 +34,14 @@ This is experimental and may not work. If it doesn't, try below.
 3. Run zsh and follow the 
    on-screen instructions to set up the shell.
    
-## Oh-My-Zsh Install
+### Oh-My-Zsh Install
 1. Run the following:
     ```bash
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
    ```
 2. Follow the on-screen instructions for setup.
 
-## Powerlevel10k and Plugins Install
+### Powerlevel10k and Plugins Install
 1. Run the following:
     ```bash
    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -56,7 +56,7 @@ This is experimental and may not work. If it doesn't, try below.
        If you want to use any of these, set them before `zsh-syntax-highlighting`.
    - On the `ZSH_THEME=` line, change the line to `ZSH_THEME="powerlevel10k/powerlevel10k"`
    
-## Powerlevel10k Setup
+### Powerlevel10k Setup
 1. (Re)launch Zsh
 2. Follow the on-screen instructions. The choices don't matter
    since this will be overridden in the next step.
