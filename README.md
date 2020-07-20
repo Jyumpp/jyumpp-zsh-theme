@@ -17,7 +17,7 @@ Once installed, select MesloLGS as the font for your terminal.
 ## Automatic Theme Install
 Run the following: 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/Jyumpp/jyumpp-zsh-theme/master/setup.zsh)"
+sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/Jyumpp/jyumpp-zsh-theme/master/setup.zsh)"
 ```
 This is experimental and may not work. If it doesn't, try below.
 
