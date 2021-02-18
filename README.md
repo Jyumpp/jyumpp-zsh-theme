@@ -1,5 +1,7 @@
 # Setup for Zsh (Hunter's Weirdly Specific Theme)
 
+![Sample of the theme](https://github.com/Jyumpp/jyumpp-zsh-theme/blob/master/sample.png)
+
 ## Font install:
 Download these four ttf files:
 
