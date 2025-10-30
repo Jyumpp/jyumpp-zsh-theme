@@ -87,6 +87,13 @@
           "style": "plain",
           "template": "took  {{ .FormattedMs }} ",
           "type": "executiontime"
+        },
+        {
+          "type": "nix-shell",
+          "style": "powerline",
+          "foreground": "blue",
+          "background": "transparent",
+          "template": "(nix-{{ .Type }})"
         }
       ],
       "type": "prompt"
@@ -108,4 +115,3 @@
     }
   ]
 }
-
