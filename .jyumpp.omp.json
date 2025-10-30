@@ -93,7 +93,7 @@
           "style": "powerline",
           "foreground": "blue",
           "background": "transparent",
-          "template": "({{ if eq .Type \"unknown\" }}{{ else }}nix shell: {{ .Type }}{{end}})"
+          "template": "{{ if eq .Type \"unknown\" }}{{ else }}(nix shell: {{ .Type }}){{end}}"
         }
       ],
       "type": "prompt"
